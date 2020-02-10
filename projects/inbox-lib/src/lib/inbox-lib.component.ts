@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-inbox-lib',
-  template: `
-    <p>
-      inbox-lib works!
-    </p>
-  `,
-  styles: []
+  selector: 'inbox-lib',
+  templateUrl: './inbox-lib.component.html',
+  styleUrls: ['./inbox-lib.component.css']
 })
 export class InboxLibComponent implements OnInit {
 
