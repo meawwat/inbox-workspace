@@ -14,13 +14,30 @@ import { MailSchema } from './mail/mail.schema';
 })
 export class InboxLibComponent implements OnInit {
   @Input() initLoadUrl: string;
+  @Input() getScrollLoadUrl: (startRow: number) => string;
   json: Array<MailSchema>;
+  lastRow: number;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.lastRow = 0;
+  }
 
   ngOnInit(): void {
     this.http.get<Array<MailSchema>>(this.initLoadUrl).subscribe(data => {
       this.json = data;
+      this.lastRow += data.length;
     });
+  }
+
+  onScroll($event) {
+    if(($event.target.scrollTop + $event.target.clientHeight) == $event.target.scrollHeight) {
+      let url = this.getScrollLoadUrl(this.lastRow);
+      this.http.get<Array<MailSchema>>(url)
+        .subscribe(data => {
+          data.map(i => this.json.push(i));
+          this.json = [...this.json];
+          this.lastRow += data.length;
+        });
+    }
   }
 }
