@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './inbox-lib.component.html',
   styleUrls: [
     '../core.css', 
+    '../../../../node_modules/office-ui-fabric-core/dist/css/fabric.min.css',
     './inbox-lib.component.scss'
   ]
 })
