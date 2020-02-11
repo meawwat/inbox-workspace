@@ -4,17 +4,8 @@
     </div>
     <div class="filter">Filter <i class="ms-Icon ms-Icon--ChevronDownMed"></i></div>
 </div>
-<div class="list">
+<div class="list" (scroll)="onScroll($event)">
     <div class="rows-container">
-        <mail class="row"></mail>
-        <mail class="row"></mail>
-        <mail class="row"></mail>
-        <mail class="row"></mail>
-        <mail class="row"></mail>
-        <mail class="row"></mail>
-        <mail class="row"></mail>
-        <mail class="row"></mail>
-        <mail class="row"></mail>
-        <mail class="row"></mail>
+        <mail class="row" *ngFor="let data of json" [mailContent]="data"></mail>
     </div>
 </div>
