@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'inbox-lib',
   templateUrl: './inbox-lib.component.html',
   styleUrls: [
-    '../core.css', 
+    '../core.scss', 
     '../../../../node_modules/office-ui-fabric-core/dist/css/fabric.min.css',
     './inbox-lib.component.scss'
   ]

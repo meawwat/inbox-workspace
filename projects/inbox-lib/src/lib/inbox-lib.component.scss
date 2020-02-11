@@ -1,10 +1,6 @@
 @import '~office-ui-fabric-core/dist/sass/_References.scss';
 
 :host {
-    user-select: none;
-    cursor: default;
-    box-sizing: border-box;
-    
     display: flex;
     flex-direction: column;
     position: relative;
@@ -24,8 +20,6 @@ i.ms-Icon--ChevronDownMed {
 }
 
 .header {
-    box-sizing: border-box;
-    
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -87,8 +81,6 @@ i.ms-Icon--ChevronDownMed {
 }
 
 .row {
-    box-sizing: border-box;
-    
     display:flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -163,20 +155,6 @@ i.ms-Icon--ChevronDownMed {
     text-overflow: ellipsis;
 }
 
-.action {
-    right: 0;
-    padding: 1px 0 0 10px;
-    
-    position: absolute;
-    display: none;
-    height: 100%;
-    top: 0;
-}
-.row:hover .action {
-    display: flex;
-    align-items: center;
-}
-
 .persona {
     display: flex;
     align-self: flex-start;
@@ -184,11 +162,10 @@ i.ms-Icon--ChevronDownMed {
     position: relative;
     width: 28px;
     min-height: 28px;
-    padding: 6px 12px 0 8px;
+    margin: 6px 12px 0 8px;
 
     cursor: pointer;
 }
-
 
 .persona-circle {
     display: block;
@@ -203,4 +180,24 @@ i.ms-Icon--ChevronDownMed {
     width: 28px;
     background-color: $ms-color-sharedBlueMagenta30;
     border-radius: 50%;
+}
+
+.row:hover .action {
+    display: flex;
+    align-items: center;
+}
+
+.action {
+    display: none;
+}
+
+.action i {
+    cursor: pointer;
+    
+    display: inline-block;
+    font-size: 14px;
+
+    margin-left: 4px;
+    height: 16px;
+    line-height: 16px;
 }
