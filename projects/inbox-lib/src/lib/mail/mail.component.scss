@@ -6,6 +6,19 @@
     flex: 1 1 auto;
     overflow: hidden;
 }
+
+.persona {
+    display: flex;
+    align-self: flex-start;
+    
+    position: relative;
+    width: 28px;
+    min-height: 28px;
+    margin: 6px 12px 0 8px;
+
+    cursor: pointer;
+}
+
 .line-1 {
     display: flex;
     flex-flow: row nowrap;
@@ -50,33 +63,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.persona {
-    display: flex;
-    align-self: flex-start;
-    
-    position: relative;
-    width: 28px;
-    min-height: 28px;
-    margin: 6px 12px 0 8px;
-
-    cursor: pointer;
-}
-
-.persona-circle {
-    display: block;
-    position: relative;
-    color: #ffffff;
-    text-align: center;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 28px;
-    height: 28px;
-    min-width: 28px;
-    width: 28px;
-    background-color: $ms-color-sharedBlueMagenta30;
-    border-radius: 50%;
 }
 
 :host:hover .action {
