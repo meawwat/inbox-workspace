@@ -2,8 +2,9 @@
   "name": "inbox-workspace",
   "version": "0.0.0",
   "scripts": {
+    "server": "json-server -p 3001 -w db.json",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently --kill-others \"npm run server\" \"ng serve\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

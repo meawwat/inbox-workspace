@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MailSchema } from './mail.schema';
 
 @Component({
   selector: 'mail',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mail.component.scss']
 })
 export class MailComponent implements OnInit {
+  @Input() mailContent: MailSchema;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

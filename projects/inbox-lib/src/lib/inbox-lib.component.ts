@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { MailSchema } from './mail/mail.schema';
 
 @Component({
   selector: 'inbox-lib',
@@ -10,10 +13,14 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class InboxLibComponent implements OnInit {
+  @Input() initLoadUrl: string;
+  json: Array<MailSchema>;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get<Array<MailSchema>>(this.initLoadUrl).subscribe(data => {
+      this.json = data;
+    });
   }
-
 }
