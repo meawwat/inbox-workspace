@@ -4,7 +4,11 @@ import { MailSchema } from './mail.schema';
 @Component({
   selector: 'mail',
   templateUrl: './mail.component.html',
-  styleUrls: ['./mail.component.scss']
+  styleUrls: [
+    '../../core.scss', 
+    '../../../../../node_modules/office-ui-fabric-core/dist/css/fabric.min.css',
+    './mail.component.scss'
+  ]
 })
 export class MailComponent implements OnInit {
   @Input() mailContent: MailSchema;
