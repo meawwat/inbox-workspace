@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './inbox-lib.component.html',
   styleUrls: [
     '../core.css', 
-    './inbox-lib.component.css'
+    './inbox-lib.component.scss'
   ]
 })
 export class InboxLibComponent implements OnInit {
