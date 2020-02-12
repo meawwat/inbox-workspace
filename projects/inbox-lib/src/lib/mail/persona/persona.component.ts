@@ -35,7 +35,7 @@ export class PersonaComponent implements OnInit {
     if (arrName.length === 1) {
       return arrName[0].charAt(0);
     }
-    return arrName[0].charAt(0) + arrName[arrName.length - 1].charAt(0);
+    return arrName[0].charAt(0).toUpperCase() + arrName[arrName.length - 1].charAt(0).toUpperCase();
   }
 
   getColor(): string {
