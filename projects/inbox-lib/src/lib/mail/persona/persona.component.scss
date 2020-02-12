@@ -1,0 +1,64 @@
+@import '~office-ui-fabric-core/dist/sass/_References.scss';
+
+.persona-circle {
+    display: block;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 28px;
+    height: 28px;
+    min-width: 28px;
+    width: 28px;
+    background-color: $ms-color-sharedBlueMagenta30;
+    border-radius: 50%;
+}
+
+:host-context(mail:hover) .persona-circle {
+    display: none;
+}
+
+:host-context(mail:hover) .persona-checkbox {
+    display: flex;
+    vertical-align: top;
+    align-items: center;
+    justify-content: center;
+}
+
+.persona-checkbox {
+    display: none;
+    margin-top: 6px;
+    width: 18px;
+    height: 18px;
+    position: relative;
+}
+
+.persona-checkbox i.ms-Icon--CircleRing {
+    font-size: 18px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    color: $ms-color-neutralSecondary;
+}
+
+.persona-checkbox i.ms-Icon--StatusCircleCheckmark {
+    font-size: 16px;
+    position: absolute;
+    left: 0.5px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 0;
+    color: $ms-color-neutralSecondary;
+}
+
+.persona-checkbox:hover i.ms-Icon--StatusCircleCheckmark {
+    opacity: 1;
+}

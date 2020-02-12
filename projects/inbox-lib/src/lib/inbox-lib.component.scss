@@ -1,25 +1,26 @@
 @import '~office-ui-fabric-core/dist/sass/_References.scss';
 
 :host {
-    user-select: none;
-    cursor: default;
-    box-sizing: border-box;
-    
     display: flex;
     flex-direction: column;
     position: relative;
     
     height: 500px;
     width: 500px;
+    min-width: 200px;
     
     margin: 0;
     padding: 0;
     border: 1px solid $ms-color-gray60;
 }
 
+i.ms-Icon--ChevronDownMed {
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
 .header {
-    box-sizing: border-box;
-    
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -81,8 +82,6 @@
 }
 
 .row {
-    box-sizing: border-box;
-    
     display:flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -103,98 +102,4 @@
 
 .row:hover {
     background-color: $ms-color-gray30;
-}
-
-.desc {
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 1 auto;
-    overflow: hidden;
-}
-.line-1 {
-    display: flex;
-    flex-flow: row nowrap;
-    overflow: hidden;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 400;
-    flex: 1 1 auto;
-    color: $ms-color-neutralDark;
-    position: relative;
-}
-
-.line-2 {
-    display: flex;
-    flex-flow: row nowrap;
-
-    overflow: hidden;
-    font-size: 14px;
-    font-weight: 400;
-    flex: 1;
-    align-items: baseline;
-    color: $ms-color-neutralSecondary;
-}
-
-.line-3 {
-    display: flex;
-    flex-flow: row nowrap;
-
-    overflow: hidden;
-    font-size: 14px;
-    font-weight: 400;
-    flex: 0 1 auto;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: $ms-color-neutralSecondary;
-
-    padding-top: 1px;
-}
-
-.text {
-    flex: 1 1 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.action {
-    right: 0;
-    padding: 1px 0 0 10px;
-    
-    position: absolute;
-    display: none;
-    height: 100%;
-    top: 0;
-}
-.row:hover .action {
-    display: flex;
-    align-items: center;
-}
-
-.persona {
-    display: flex;
-    align-self: flex-start;
-    
-    position: relative;
-    width: 28px;
-    min-height: 28px;
-    padding: 6px 12px 0 8px;
-
-    cursor: pointer;
-}
-
-
-.persona-circle {
-    display: block;
-    position: relative;
-    color: #ffffff;
-    text-align: center;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 28px;
-    height: 28px;
-    min-width: 28px;
-    width: 28px;
-    background-color: $ms-color-sharedBlueMagenta30;
-    border-radius: 50%;
 }

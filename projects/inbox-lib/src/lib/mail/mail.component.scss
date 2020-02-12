@@ -1,0 +1,87 @@
+@import '~office-ui-fabric-core/dist/sass/_References.scss';
+
+.desc {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.persona {
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    
+    position: relative;
+    min-width: 28px;
+    min-height: 28px;
+    margin: 3px 12px 0 8px;
+
+    cursor: pointer;
+}
+
+.line-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    flex: 1 1 auto;
+    color: $ms-color-neutralDark;
+    position: relative;
+}
+
+.line-2 {
+    display: flex;
+    flex-flow: row nowrap;
+
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    flex: 1;
+    align-items: baseline;
+    color: $ms-color-neutralSecondary;
+}
+
+.line-3 {
+    display: flex;
+    flex-flow: row nowrap;
+
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    flex: 0 1 auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $ms-color-neutralSecondary;
+
+    padding-top: 1px;
+}
+
+.text {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+:host:hover .action {
+    display: flex;
+    align-items: center;
+}
+
+.action {
+    display: none;
+}
+
+.action i {
+    cursor: pointer;
+    
+    display: inline-block;
+    font-size: 14px;
+
+    margin-left: 4px;
+    height: 16px;
+    line-height: 16px;
+}
