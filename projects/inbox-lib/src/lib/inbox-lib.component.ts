@@ -35,11 +35,14 @@ export class InboxLibComponent implements OnInit {
     if(($event.target.scrollTop + $event.target.clientHeight) == $event.target.scrollHeight) {
       let url = this.getScrollLoadUrl(this.lastRow);
       this.http.get<Array<MailSchema>>(url)
-        .subscribe(data => {
-          data.map(i => this.json.push(i));
-          this.json = [...this.json];
-          this.lastRow += data.length;
-        });
+        .subscribe(
+          data => {
+            data.map(i => this.json.push(i));
+            this.json = [...this.json];
+            this.lastRow += data.length;
+          },
+          error => console.warn(`URL:'${url}'`, error)
+        );
     }
   }
 }
