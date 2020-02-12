@@ -1,12 +1,12 @@
 {
   "name": "inbox-workspace",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
-    "server": "json-server -p 3001 -w db.json",
+    "server": "json-server -p 4209 -w db.json",
     "ng": "ng",
     "start": "concurrently --kill-others \"npm run server\" \"ng serve\"",
-    "build": "ng build",
-    "test": "ng test",
+    "build": "ng build inbox-lib",
+    "test": "ng test inbox-lib",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

@@ -2,9 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
-## Development server
+## Run InboxLibComponent
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. JSON-Server will start concurrently on `http://localhost:4201/`. (Change port by go to package.json > scripts > server)
 
 ## Code scaffolding
 
