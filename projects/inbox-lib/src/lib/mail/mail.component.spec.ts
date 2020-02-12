@@ -38,7 +38,7 @@ describe('MailComponent', () => {
       expect(compiled.querySelector('.line-3 span.text').textContent).toEqual('');
     });
     
-    it('shoult handle null', () => {
+    it('should handle null', () => {
       const fixture = TestBed.createComponent(MailComponent);
       fixture.componentInstance.mailContent = null
       fixture.detectChanges();
@@ -49,7 +49,7 @@ describe('MailComponent', () => {
       expect(compiled.querySelector('.line-3 span.text').textContent).toEqual('');
     });
 
-    it('shoult handle undefined', () => {
+    it('should handle undefined', () => {
       const fixture = TestBed.createComponent(MailComponent);
       fixture.componentInstance.mailContent = undefined
       fixture.detectChanges();
@@ -61,7 +61,7 @@ describe('MailComponent', () => {
     });
   });
   
-  it('shoult handle empty email', () => {
+  it('should handle empty email', () => {
     let mail: MailSchema = {
       from: {
         name: 'Hello Sawaddee',
@@ -80,7 +80,7 @@ describe('MailComponent', () => {
     expect(compiled.querySelector('.line-3 span.text').textContent).toEqual('Oscar winners Sir Anthony Hopkins and Ed Harris.');
   });
 
-  it('shoult handle empty name', () => {
+  it('should handle empty name', () => {
     let mail: MailSchema = {
       from: {
         name: '',
@@ -99,7 +99,7 @@ describe('MailComponent', () => {
     expect(compiled.querySelector('.line-3 span.text').textContent).toEqual('Oscar winners Sir Anthony Hopkins and Ed Harris.');
   });
   
-  it('shoult handle empty subject', () => {
+  it('should handle empty subject', () => {
     let mail: MailSchema = {
       from: {
         name: 'Hello Sawaddee',
@@ -118,7 +118,7 @@ describe('MailComponent', () => {
     expect(compiled.querySelector('.line-3 span.text').textContent).toEqual('Oscar winners Sir Anthony Hopkins and Ed Harris.');
   });
   
-  it('shoult handle empty body', () => {
+  it('should handle empty body', () => {
     let mail: MailSchema = {
       from: {
         name: 'Hello Sawaddee',
