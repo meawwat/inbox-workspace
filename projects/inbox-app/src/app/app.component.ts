@@ -11,7 +11,7 @@ export class AppComponent {
 
   initUrl = `http://localhost:${this.port}/inbox?_start=0&_limit=${this.limit}`;
   
-  getScrollLoadUrl(startRow: number): string {
+  getScrollLoadUrl = (startRow: number): string => {
     return `http://localhost:${this.port}/inbox?_start=${startRow}&_limit=${this.limit}`
-  }
+  };
 }
