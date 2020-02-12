@@ -86,7 +86,7 @@ describe('PersonaComponent', () => {
       let color1 = component.getColor();
       
       component.email = "godzilla@hahasoft.com";
-      let color2 = component.getColor();
+      component.getColor();
 
       component.email = "tetsu@larc.com";
       let color3 = component.getColor();

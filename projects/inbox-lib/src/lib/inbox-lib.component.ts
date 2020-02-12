@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { MailSchema } from './mail/mail.schema';
 
 @Component({
@@ -25,6 +24,7 @@ export class InboxLibComponent implements OnInit {
   ngOnInit(): void {
     if (!this.initLoadUrl) return;
     this.http.get<Array<MailSchema>>(this.initLoadUrl).subscribe(data => {
+      this.lastRow = 0;
       this.json = data;
       this.lastRow += data.length;
     });
