@@ -22,4 +22,10 @@ describe('PersonaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create initial from name and surname', () => {
+    component.name = "Chatchai Meawwat Minamoto Kamonpanat"
+    let initial = component.getInitial();
+    expect(initial).toEqual('CK');
+  });
 });

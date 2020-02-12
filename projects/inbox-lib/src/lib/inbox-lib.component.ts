@@ -23,6 +23,7 @@ export class InboxLibComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (!this.initLoadUrl) return;
     this.http.get<Array<MailSchema>>(this.initLoadUrl).subscribe(data => {
       this.json = data;
       this.lastRow += data.length;
@@ -30,6 +31,7 @@ export class InboxLibComponent implements OnInit {
   }
 
   onScroll($event) {
+    if (!this.getScrollLoadUrl) return;
     if(($event.target.scrollTop + $event.target.clientHeight) == $event.target.scrollHeight) {
       let url = this.getScrollLoadUrl(this.lastRow);
       this.http.get<Array<MailSchema>>(url)
