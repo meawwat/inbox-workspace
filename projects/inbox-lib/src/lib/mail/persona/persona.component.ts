@@ -14,7 +14,7 @@ export class PersonaComponent implements OnInit {
   @Input() name: string;
   @Input() email: string;
   
-  initial:string = "";
+  initial:string = '';
   color:string = ColorCode[0].code;
 
   constructor() { }
@@ -29,17 +29,18 @@ export class PersonaComponent implements OnInit {
 
     if (this.name && this.name.length > 0) {
       arrName = this.name.trim().split(' ');
-    } else return "";
+    } else return '';
 
-    if (arrName.length < 1 || arrName[0].length < 1) return "";
+    if (arrName.length < 1 || arrName[0].length < 1) return '';
     if (arrName.length === 1) {
       return arrName[0].charAt(0);
     }
-    return arrName[0].charAt(0) + arrName[arrName.length - 1].charAt(0);
+    return arrName[0].charAt(0).toUpperCase() + arrName[arrName.length - 1].charAt(0).toUpperCase();
   }
 
   getColor(): string {
     let sum = 0;
+    if (!this.email) return '';
     for (let i = 0; i < this.email.length; i++) {
       sum += this.email.charCodeAt(i);
     }

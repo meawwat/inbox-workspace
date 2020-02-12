@@ -1,7 +1,7 @@
-<persona class="persona" [name]="mailContent.from.name" [email]="mailContent.from.email"></persona>
+<persona class="persona" [name]="mailContent?.from.name" [email]="mailContent?.from.email"></persona>
 <div class="desc">
     <div class="line-1">
-        <span class="text" [title]="mailContent.from.email">{{ mailContent.from.name }}</span>
+        <span class="text" [title]="mailContent ? mailContent.from.email : ''">{{ mailContent?.from.name }}</span>
         <div class="action">
             <i class="ms-Icon ms-Icon--Delete"></i>
             <i class="ms-Icon ms-Icon--Mail"></i>
@@ -10,10 +10,10 @@
         </div>
     </div>
     <div class="line-2">
-        <span class="text">{{ mailContent.subject }}</span>
+        <span class="text">{{ mailContent?.subject }}</span>
         <!-- <span class="datetime">12:00</span> -->
     </div>
     <div class="line-3">
-        <span class="text">{{ mailContent.body }}</span>
+        <span class="text">{{ mailContent?.body }}</span>
     </div>
 </div>
